@@ -1,4 +1,5 @@
 import React from "react";
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -34,6 +35,15 @@ const Footer = () => {
             alias explicabo enim. Veritatis accusamus molestiae soluta totam
             doloribus nostrum facilis eius fugit consequuntur voluptates?
           </span>
+        </div>
+      </div>
+      <div className="bottom">
+        <div className="left">
+          <span className="logo">ND Clothing</span>
+          <span className="copyright">Copyright 2023. All Rights Reserved</span>
+        </div>
+        <div className="right">
+          <img src="/img/payment-footer.png" alt="logo"></img>
         </div>
       </div>
     </div>

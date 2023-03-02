@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.scss";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
@@ -39,8 +39,12 @@ const Footer = () => {
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">ND Clothing</span>
-          <span className="copyright">Copyright 2023. All Rights Reserved</span>
+          {/* <span className="logo">ND Clothing</span> */}
+          <span className="copyright">
+            {" "}
+            Copyright {new Date().getFullYear()} All Rights Reserved N.D
+            Clothing
+          </span>
         </div>
         <div className="right">
           <img src="/img/payment-footer.png" alt="logo"></img>

@@ -11,7 +11,7 @@ const Layout = () => {
     <div className="app">
       <Navbar />
       <Outlet />
-      <Slider />
+
       <Footer />
     </div>
   );

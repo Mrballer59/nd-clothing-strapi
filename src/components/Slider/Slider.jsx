@@ -1,6 +1,7 @@
 import React from "react";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcons from "@mui/icons-material/WestOutlined";
+import './Slider.scss'
 
 const Slider = () => {
   const data = [
@@ -11,9 +12,9 @@ const Slider = () => {
   return (
     <div className="slider">
       <div className="container">
-        <img src={data[0]} className=""></img>
-        <img src={data[1]} className=""></img>
-        <img src={data[2]} className=""></img>
+        <img src={data[0]} alt=""/> 
+        <img src={data[1]} alt=""/> 
+        <img src={data[2]} alt=""/> 
       </div>
       <div className="icons">
         <div className="icon">

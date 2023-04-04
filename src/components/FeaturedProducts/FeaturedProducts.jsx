@@ -1,5 +1,6 @@
 import React from 'react'
 import './FeaturedProducts.scss'
+import Card from '../Card/Card'
 
 const FeaturedProducts =({type}) => {
     const data =[
@@ -46,7 +47,11 @@ const FeaturedProducts =({type}) => {
             <h1>{type} products</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nemo libero perferendis eligendi aliquid autem distinctio sunt repudiandae neque facilis. Exercitationem fugit eius officiis omnis debitis sint corrupti ab? Natus et aliquid itaque nam neque.</p>
          </div>
-         <div className='bottom'></div>
+         <div className='bottom'>
+            {data.map(item =>(
+                <Card item={item} key={item.id}/>
+            ))}
+         </div>
          </div>
     )
 }

@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(200);
+  const [sort, setSort] = useState(null);
   console.log(catId);
   return (
     <div className="products">
@@ -41,11 +42,23 @@ const Products = () => {
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
-            <input type="radio" id="asc" value="asc" name="price" />
+            <input
+              type="radio"
+              id="asc"
+              value="asc"
+              name="price"
+              onChange={(e) => setSort("asc")}
+            />
             <label htmlFor="asc">Price (Lowest first)</label>
           </div>
           <div className="inputItem">
-            <input type="radio" id="desc" value="desc" name="price" />
+            <input
+              type="radio"
+              id="desc"
+              value="desc"
+              name="price"
+              onChange={(e) => setSort("desc")}
+            />
             <label htmlFor="asc">Price (Highest first)</label>
           </div>
         </div>
@@ -56,7 +69,7 @@ const Products = () => {
           className=""
           src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
         />
-        <List />
+        <List catId={catId} maxPrice={maxPrice} sort={sort} />
       </div>
     </div>
   );

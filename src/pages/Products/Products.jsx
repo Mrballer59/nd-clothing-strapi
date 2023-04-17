@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Products.scss";
+import List from "../../components/List/List";
+import { useParams } from "react-router";
 
 const Products = () => {
+  const catId = parseInt(useParams().id);
+  const [maxPrice, setMaxPrice] = useState(200);
+  console.log(catId);
   return (
     <div className="products">
       <div className="left">
@@ -24,8 +29,13 @@ const Products = () => {
           <h2>Filters by Price</h2>
           <div className="inputItem">
             <span>0</span>
-            <input type="range" min={0} max={200} />
-            <span>200</span>
+            <input
+              type="range"
+              min={0}
+              max={200}
+              onChange={(e) => setMaxPrice(e.target.value)}
+            />
+            <span>{maxPrice}</span>
           </div>
         </div>
         <div className="filterItem">
@@ -46,6 +56,7 @@ const Products = () => {
           className=""
           src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
         />
+        <List />
       </div>
     </div>
   );

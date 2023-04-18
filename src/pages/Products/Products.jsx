@@ -66,8 +66,8 @@ const Products = () => {
       <div className="right">
         <img
           alt="img"
-          className=""
-          src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+          className="catImg"
+          src="https://images.unsplash.com/photo-1540270776932-e72e7c2d11cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
         />
         <List catId={catId} maxPrice={maxPrice} sort={sort} />
       </div>

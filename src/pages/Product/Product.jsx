@@ -42,7 +42,7 @@ const Product = () => {
         <button className="add">
           <AddShoppingCartIcon /> ADD TO Cart
         </button>
-        <div className="link">
+        <div className="links">
           <div className="item">
             <FavoriteBorderIcon /> ADD TO WishList
           </div>
@@ -56,7 +56,7 @@ const Product = () => {
           <span>Tag: T-shirt, Women, Top</span>
         </div>
         <hr />
-        <div className="details">
+        <div className="info">
           <span>Description</span>
           <hr />
           <span>Additional Information</span>
